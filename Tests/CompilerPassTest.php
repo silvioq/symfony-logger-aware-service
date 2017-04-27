@@ -27,7 +27,7 @@ class  CompilerPassTest extends AbstractCompilerPassTestCase
         
         $service = $this->createMock('Silvioq\LASBundle\LoggerAwareService');
         
-        $toBeAwaredService = new Definition($service);
+        $toBeAwaredService = new Definition( get_class( $service ) );
         $this->setDefinition( 'tba_service', $toBeAwaredService );
         $this->setDefinition( 'logger', new Definition( $logger ) );
         

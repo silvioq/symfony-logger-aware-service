@@ -10,7 +10,6 @@ class SilvioqLASExtension extends Extension
     
     public function load(array $configs, ContainerBuilder $container)
     {
-        $container->addCompilerPass( new CompilerPass\LoggerInjectorCompilerPass() );
     }
 
 }

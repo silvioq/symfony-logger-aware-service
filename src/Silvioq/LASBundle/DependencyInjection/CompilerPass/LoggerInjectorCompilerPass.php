@@ -16,7 +16,7 @@ class LoggerInjectorCompilerPass implements CompilerPassInterface
     {
         foreach( $container->getDefinitions() as $definition )
         {
-            if( $definition->getClass() instanceof LoggerAwareService )
+            if( is_a( $definition->getClass(), LoggerAwareService::class, true ) )
             {
                 $definition->addMethodCall( "setLogger", [new Reference("logger")] );
             }
