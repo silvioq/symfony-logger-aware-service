@@ -1,0 +1,28 @@
+{
+    "name": "silvioq/logger-aware-service",
+    "description": "Abstract class to automatize loggin in own services",
+    "type": "library",
+    "require": {
+        "psr/log": "^1.0",
+        "symfony/dependency-injection": "^2.8|^3.0",
+        "symfony/http-kernel": "^2.8|^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "matthiasnoback/symfony-dependency-injection-test": "^1.1"
+    },
+    "autoload": {
+        "psr-4": { "Silvioq\\LASBundle\\": "./src/Silvioq/LASBundle" },
+        "exclude-from-classmap": [ "/Tests/" ]
+    },
+    "autoload-dev": {
+        "psr-4": { "Silvioq\\LASBundle\\Tests\\": "Tests/" }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Silvio",
+            "email": "silvioq@gmail.com"
+        }
+    ]
+}
